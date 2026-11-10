@@ -1,0 +1,15 @@
+<mxfile host="app.diagrams.net" modified="2026-11-10T19:10:00.000Z" agent="Mozilla/5.0" version="24.0.0" type="device">
+  <diagram id="q2-strategy" name="Questao 2 - Strategy">
+    <mxGraphModel dx="1600" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1000" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="ctx" value="&lt;center&gt;&lt;b&gt;TiqueteEstacionamento&lt;/b&gt;&lt;/center&gt;&lt;hr size=&quot;1&quot;/&gt;- placaVeiculo: String&lt;br/&gt;- tempoPermanenciaMinutos: int&lt;br/&gt;- perfilCobranca: PerfilCobranca&lt;hr size=&quot;1&quot;/&gt;+ setPerfilCobranca(p: PerfilCobranca): void&lt;br/&gt;+ calcularValorPagar(): double&lt;br/&gt;+ imprimirResumo(): void" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1"><mxGeometry x="120" y="100" width="340" height="150" as="geometry" /></mxCell>
+        <mxCell id="strat" value="&lt;center&gt;&amp;lt;&amp;lt;interface&amp;gt;&amp;gt;&lt;br/&gt;&lt;b&gt;PerfilCobranca&lt;/b&gt;&lt;/center&gt;&lt;hr size=&quot;1&quot;/&gt;+ getNomePerfil(): String&lt;br/&gt;+ calcularTarifa(tempoPermanenciaMinutos: int): double" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1"><mxGeometry x="680" y="100" width="380" height="100" as="geometry" /></mxCell>
+        <mxCell id="s1" value="&lt;center&gt;&lt;b&gt;PerfilRotativo&lt;/b&gt;&lt;/center&gt;&lt;hr size=&quot;1&quot;/&gt;+ VALOR_HORA_INICIADA: double = 12.00&lt;hr size=&quot;1&quot;/&gt;+ getNomePerfil(): String&lt;br/&gt;+ calcularTarifa(min: int): double" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1"><mxGeometry x="420" y="320" width="300" height="110" as="geometry" /></mxCell>
+        <mxCell id="s2" value="&lt;center&gt;&lt;b&gt;PerfilMensalista&lt;/b&gt;&lt;/center&gt;&lt;hr size=&quot;1&quot;/&gt;+ VALOR_FIXO_MENSALISTA: double = 25.00&lt;hr size=&quot;1&quot;/&gt;+ getNomePerfil(): String&lt;br/&gt;+ calcularTarifa(min: int): double" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1"><mxGeometry x="750" y="320" width="300" height="110" as="geometry" /></mxCell>
+        <mxCell id="s3" value="&lt;center&gt;&lt;b&gt;PerfilConveniado&lt;/b&gt;&lt;/center&gt;&lt;hr size=&quot;1&quot;/&gt;+ MINUTOS_TOLERANCIA_GRATUITA: int = 30&lt;br/&gt;+ VALOR_HORA_INICIADA: double = 12.00&lt;br/&gt;+ PERCENTUAL_DESCONTO: double = 0.25&lt;hr size=&quot;1&quot;/&gt;+ getNomePerfil(): String&lt;br/&gt;+ calcularTarifa(min: int): double" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1"><mxGeometry x="1080" y="320" width="320" height="130" as="geometry" /></mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
